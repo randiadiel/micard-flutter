@@ -12,29 +12,39 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Container(
-                height: 100.0,
                 width: 100.0,
-// You can use EdgeInsets.symetrics/ fromLTRB(vertical: xx.x, horizontal: xx.x)
-//            margin: EdgeInsets.only(left: 30.0),
-//            padding: EdgeInsets.all(20.0),
-                color: Colors.white,
+                color: Colors.red,
                 child: Text('Container 1'),
               ),
               Container(
-                  width: 100.0,
-                  height: 100.0,
-                  color: Colors.blue,
-                  child: Text('Container 2')),
+                width: 100.0,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      width: 100.0,
+                      height: 100.0,
+                      color: Colors.yellow,
+                      child: Text('Container 3'),
+                    ),
+                    Container(
+                      width: 100.0,
+                      height: 100.0,
+                      color: Colors.green,
+                      child: Text('Container 4'),
+                    )
+                  ],
+                ),
+              ),
               Container(
                 width: 100.0,
-                height: 100.0,
-                color: Colors.red,
+                color: Colors.blue,
                 child: Text('Container 2'),
-              ),
+              )
             ],
           ),
         ),
